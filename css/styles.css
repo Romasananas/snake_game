@@ -1,0 +1,43 @@
+#gameContainer {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+canvas {
+    background-image: url('/img/backgroundUnit.svg');
+    background-repeat: repeat;
+}
+
+
+.score {
+    margin: 10px auto;
+    display: flex;
+    width: 300px;
+    height: 50px;
+    justify-content: space-around;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#currentScore {
+    margin: auto 0;
+    height: max-content;
+    font-size: 30px;
+}
+
+#bestScore {
+    margin: auto 0;
+    height: max-content;
+    font-size: 30px;
+}
+
+#gameBoard {
+    margin: 10px auto;
+    display: block;
+    border: 2px solid black;
+}
+
+#restartBtn {
+    display: block;
+    margin: 10px auto;
+}
