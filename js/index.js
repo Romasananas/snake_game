@@ -47,8 +47,8 @@ function gameStart() {
 }
 
 function gameLoop() {
-    if (gameRunning === true) {
-        setTimeout(() => {
+    if (gameRunning) {
+        setInterval(() => {
             context.clearRect(0, 0, canvas.width, canvas.height);
             drawFood();
             drawSnake();
@@ -127,6 +127,7 @@ function restartGame() {
 
 	drawScore();
 	randomPositionFood();
+    gameStart();
 }
 
 function getRandomInt(min, max) {
@@ -181,10 +182,10 @@ function changeDirection(event){
 }
 
 function displayGameOver(){
-    ctx.font = '50px Comfortaa, cursive';
-    ctx.fillStyle = 'black';
-    ctx.textAlign = 'center';
-    ctx.textSize = '500';
-    ctx.fillText('ИГРА ОКОНЧЕНА!', canvas.width / 2, canvas.height / 2);
-    running = false;
+    context.font = '50px Comfortaa, cursive';
+    context.fillStyle = 'black';
+    context.textAlign = 'center';
+    context.textSize = '500';
+    context.fillText('ИГРА ОКОНЧЕНА!', canvas.width / 2, canvas.height / 2);
+    gameRunning = false;
 };
