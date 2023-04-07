@@ -52,12 +52,12 @@ canvas {
     border: 2px solid black;
 }
 
-#restartBtn {
+.restartBtn {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     width: 400px;
     height: 50px;
-    display: block;
+    display: none;
     margin: 10px auto;
     color: azure;
     background-color:rgb(77, 77, 77);
@@ -66,6 +66,10 @@ canvas {
     transition: 0.5s;
 }
 
-#restartBtn:hover {
+.restartBtn:hover {
     transform: scale(0.95);
+}
+
+.showRestartBtn {
+    display: block;
 }
